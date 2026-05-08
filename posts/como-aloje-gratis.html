@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo alojé esta web GRATIS para siempre | SaaS Vision</title>
+    <meta name="description"
+        content="La historia real de cómo mudé mi proyecto a GitHub Pages en una noche de pánico para escapar de las suscripciones mensuales y ahorrar dinero en servidores.">
+    <link rel="stylesheet" href="../style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="reading-progress"></div>
+
+    <div class="ambient-glow"></div>
+
+    <header class="glass-header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">SaaS <span class="neon-text">Vision</span></a>
+            <nav class="nav-links">
+                <a href="../index.html">Inicio</a>
+                <a href="../sobre-mi.html">Sobre mí</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <div class="article-header fade-in-up">
+                <h1>Cómo alojé esta web GRATIS para siempre (tras chocar con el muro de pago de Netlify)</h1>
+                <div class="article-meta">
+                    <span>Publicado el: 08 Mayo 2026</span> | <span>Por: SaaS Vision</span> | <span>Tiempo de lectura: 5
+                        min</span>
+                </div>
+            </div>
+
+            <div class="article-image fade-in-up delay-1"
+                style="margin-top: 2rem; margin-bottom: 2rem; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);">
+                <img src="../assets/mudanza-github.png"
+                    alt="Mano con tarjeta de crédito frente a portátil con logo de GitHub Pages"
+                    style="width: 100%; height: auto; display: block;">
+            </div>
+
+            <div class="article-content fade-in-up delay-1">
+                <p>Ayer por la tarde me llevé uno de esos sustos que te dejan el corazón en un puño cuando estás
+                    intentando sacar adelante un proyecto personal. Estaba tan emocionado subiendo los últimos cambios
+                    de SaaS Vision, viendo cómo los colores neón y las tarjetas translúcidas que me había diseñado la IA
+                    por fin cobraban vida en internet, cuando de repente, la pantalla se quedó congelada.</p>
+
+                <p>Me apareció un mensaje que decía algo así como: <em>"Production deploys paused"</em>. Básicamente,
+                    Netlify (que era donde tenía alojada la web) me estaba diciendo que había superado el límite de
+                    créditos y que, si quería seguir actualizando mi sitio, tenía que pasar por caja.</p>
+
+                <p>Como estudiante de primero que está empezando en esto de la Inteligencia Artificial y el SaaS, ese
+                    mensaje fue como chocarme contra un muro de hormigón. ¿Pagar? ¿Ya? Pero si apenas estoy empezando y
+                    todavía no he ganado ni un solo céntimo. Me entró una pequeña paranoia: ¿Es que no se puede montar
+                    nada hoy en día sin que una gran tecnológica te acabe cobrando una suscripción mensual?</p>
+
+                <p>Esa frustración fue el motor para ponerme a investigar durante toda la noche. Y hoy quiero contaros
+                    cómo conseguí "escapar" de ese muro de pago y por qué ahora esta web vive en una casa mucho más
+                    segura y, sobre todo, gratuita de por vida.</p>
+
+                <h2>El susto del "Freemium"</h2>
+                <p>Para los que no estéis muy metidos en el tema, Netlify es una plataforma genial para subir webs. Es
+                    muy fácil de usar porque solo tienes que arrastrar tu carpeta y listo. Pero tiene trampa. Bueno, no
+                    es una trampa, es un negocio, y como estudiante a veces se nos olvida.</p>
+
+                <p>Resulta que si invitas a alguien a tu equipo por error, o si tu web empieza a recibir muchas visitas
+                    o consume muchos recursos, el plan gratuito se te queda pequeño en un suspiro. Ayer me di cuenta de
+                    que mi plan "Starter" había muerto. Tenía dos opciones: o pagaba unos 20€ al mes (que para mí es un
+                    presupuesto de guerra) o buscaba una alternativa.</p>
+
+                <p>Me sentí un poco tonto. Pensé: <em>"Sergio, ¿cómo vas a hablar de crear negocios rentables si no eres
+                        capaz ni de mantener tu propio blog online gratis?"</em>. Pero en lugar de rendirme, recordé que
+                    en clase alguien mencionó una herramienta que usan los programadores de verdad: GitHub Pages.</p>
+
+                <h2>El descubrimiento: GitHub no es solo para "hackers"</h2>
+                <p>Siempre le había tenido un miedo atroz a GitHub. Veía esas pantallas negras con letras verdes y esos
+                    comandos que parecen sacados de una película de Matrix y pensaba: <em>"Eso no es para mí, yo todavía
+                        no sé programar tanto"</em>.</p>
+
+                <p>Pero resulta que estaba muy equivocado. GitHub es como una biblioteca gigante donde los programadores
+                    guardan sus libros (el código). Y lo mejor de todo es que tienen una sección llamada <strong>GitHub
+                        Pages</strong> que te permite decirle: <em>"Oye, esta carpeta que he subido es una página web,
+                        ¿puedes enseñársela al mundo?"</em>.</p>
+
+                <p>Y Microsoft (que es la dueña de GitHub) te dice que sí, y además te dice que es <strong>gratis para
+                        siempre</strong>. Sin límites de "créditos" raros, sin sustos a fin de mes y con una potencia
+                    que aguanta miles de visitas sin despeinarse.</p>
+
+                <h2>La mudanza: Nervios y DNS</h2>
+                <p>No os voy a mentir: mudar la web de sitio me dio respeto. Tenía miedo de romper algo o de que mi
+                    dominio <code>.es</code> (que compré en DonDominio hace unos días) dejara de funcionar.</p>
+
+                <p>El proceso fue una mezcla de adrenalina y aprendizaje constante. Tuve que crear un "repositorio" (que
+                    es como una carpeta en la nube), arrastrar todos mis archivos y luego hacer el baile de las DNS.
+                    Para un novato como yo, entrar en el panel de control de tu dominio y empezar a borrar y escribir
+                    números es como intentar desactivar una bomba por primera vez. <em>"¿Borro este registro A? ¿Qué
+                        pasa si quito este CNAME?"</em>.</p>
+
+                <p>Hubo un momento de pánico real cuando, al entrar en mi web, me salió un error de "Conexión no
+                    privada". Pensé que me había cargado la web para siempre. Pero tras un par de horas de paciencia (y
+                    unos cuantos vasos de agua), el candadito verde de seguridad volvió a aparecer.</p>
+
+                <h2>¿Por qué esto es una victoria para todos nosotros?</h2>
+                <p>Os cuento esto porque creo que es la lección más importante que he aprendido esta semana. Como
+                    emprendedores solitarios o estudiantes, nuestro mayor enemigo no es la falta de ideas, es el
+                    <strong>gasto innecesario</strong>.
+                </p>
+
+                <p>Cada suscripción de 15€ o 20€ que evitas pagar al principio es dinero que te permite aguantar más
+                    tiempo vivo. Al mudar mi web a GitHub Pages, he conseguido tres cosas fundamentales:</p>
+                <ul>
+                    <li><strong>Coste 0€:</strong> Mi único gasto es el dominio que pago una vez al año. El servidor me
+                        sale gratis.</li>
+                    <li><strong>Aprendizaje Real:</strong> He dejado de usar "atajos" para entender cómo funciona de
+                        verdad internet por debajo.</li>
+                    <li><strong>Libertad Total:</strong> Nadie me va a mandar un correo mañana diciendo que he superado
+                        un límite de cuota.</li>
+                </ul>
+
+                <h2>Conclusión: No tengas miedo a romper cosas</h2>
+                <p>Si estás intentando montar tu primer blog o tu primer proyecto de IA y te encuentras con un muro de
+                    pago, no saques la tarjeta de crédito a la primera. Investiga. Hay herramientas increíbles ahí fuera
+                    que son gratuitas si estás dispuesto a dedicarle una tarde a aprender cómo funcionan.</p>
+
+                <p>Mi web ahora carga más rápido, es más segura y me permite dormir tranquilo sabiendo que mi
+                    presupuesto mensual sigue siendo de cero euros. La transición ha sido un poco caótica (podéis leerlo
+                    en mis posts anteriores), pero ha valido totalmente la pena.</p>
+
+                <p>Si alguien está pasando por lo mismo y se ha quedado bloqueado con Netlify o cualquier otra
+                    plataforma, mi consejo es sencillo: pásate a GitHub Pages. Es un poco más "manual", sí, pero la
+                    sensación de tener el control total de tu proyecto no tiene precio.</p>
+
+                <p>¡Nos vemos en el próximo post, que espero que ya sea para hablaros de cómo estoy usando la IA para
+                    estudiar en la mitad de tiempo!</p>
+            </div>
+
+            <section class="related-articles fade-in-up delay-2">
+                <h3>Artículos Relacionados</h3>
+                <div class="post-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <a href="construir-saas-sin-codigo-2026.html" class="post-card">
+                        <div class="post-image-container">
+                            <div class="card-image-placeholder purple-gradient"
+                                style="background-image: url('../assets/nocode-saas.png'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="post-category">No-Code</div>
+                        </div>
+                        <div class="post-content" style="padding: 15px;">
+                            <h3 style="font-size: 1.1rem; margin-bottom: 5px;">Cómo Construir tu SaaS en 2026 sin Código
+                            </h3>
+                        </div>
+                    </a>
+                    <a href="ia-local-privacidad.html" class="post-card">
+                        <div class="post-image-container">
+                            <div class="card-image-placeholder purple-gradient"
+                                style="background-image: url('../assets/ia_local_laptop.png'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="post-category">Inteligencia Artificial</div>
+                        </div>
+                        <div class="post-content" style="padding: 15px;">
+                            <h3 style="font-size: 1.1rem; margin-bottom: 5px;">IA Local: Cómo dejé de regalar mis datos
+                                a la nube</h3>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>SaaS <span class="neon-text">Vision</span></h2>
+                    <p>El futuro de la tecnología, hoy.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="../aviso-legal.html">Aviso Legal</a>
+                    <a href="../politica-privacidad.html">Política de Privacidad</a>
+                    <a href="../politica-cookies.html">Política de Cookies</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SaaS Vision. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <p>Utilizamos cookies propias y de terceros. <a href="../politica-cookies.html" class="neon-text">Más
+                    información</a>.</p>
+            <div class="cookie-buttons">
+                <button id="accept-cookies" class="btn-primary">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="back-to-top" title="Volver arriba">↑</div>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
