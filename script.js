@@ -68,7 +68,7 @@ const observer = new IntersectionObserver((entries, observer) => {
 // Función para cargar Google Analytics respetando el RGPD
 function loadGoogleAnalytics() {
     if (window.gtag) return; // Evitar cargar dos veces
-    
+
     const script1 = document.createElement('script');
     script1.async = true;
     script1.src = 'https://www.googletagmanager.com/gtag/js?id=G-0RHCNTL9YB';
@@ -92,11 +92,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .zoom-in');
     animatedElements.forEach(el => {
         const rect = el.getBoundingClientRect();
-        if(rect.top > window.innerHeight * 0.9) {
-             el.style.animationPlayState = 'paused';
-             observer.observe(el);
+        if (rect.top > window.innerHeight * 0.9) {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
         } else {
-             el.style.animationPlayState = 'running';
+            el.style.animationPlayState = 'running';
         }
     });
 
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Lógica para el botón de "Volver arriba" y "Barra de Progreso"
     const backToTopBtn = document.getElementById('back-to-top');
     const progressBar = document.getElementById('reading-progress');
-    
+
     window.addEventListener('scroll', () => {
         // Mostrar/ocultar botón volver arriba
         if (backToTopBtn) {
@@ -212,14 +212,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Solo generar en páginas que tengan .article-meta y que no sean la página "sobre-mi"
     const articleContent = document.querySelector('.article-content');
     const isPost = document.querySelector('.article-meta') !== null && !window.location.pathname.includes('sobre-mi');
-    
+
     if (articleContent && isPost) {
         const headings = articleContent.querySelectorAll('h2, h3');
         if (headings.length > 0) {
             const tocContainer = document.createElement('div');
             tocContainer.className = 'toc-container';
             tocContainer.innerHTML = '<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg> Contenido del Artículo</h3>';
-            
+
             const tocList = document.createElement('ul');
             tocList.className = 'toc-list';
 
@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const a = document.createElement('a');
                 a.href = '#' + heading.id;
                 a.textContent = heading.textContent;
-                
+
                 a.addEventListener('click', (e) => {
                     e.preventDefault();
                     const target = document.getElementById(heading.id);
@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             tocContainer.appendChild(tocList);
-            
+
             // Insertar justo antes del primer H2, para que la imagen y la intro queden por encima
             const firstH2 = articleContent.querySelector('h2');
             if (firstH2) {
@@ -270,3 +270,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+// --- Función para copiar el enlace del artículo ---
+function copyArticleLink() {
+    const url = window.location.href; // Coge la URL actual
+    navigator.clipboard.writeText(url).then(() => {
+        const successMsg = document.getElementById('copySuccessMsg');
+        if (successMsg) {
+            successMsg.style.display = 'inline'; // Muestra el mensaje
+            // Lo oculta después de 2 segundos
+            setTimeout(() => {
+                successMsg.style.display = 'none';
+            }, 2000);
+        }
+    }).catch(err => {
+        console.error('Error al copiar el enlace: ', err);
+    });
+}
