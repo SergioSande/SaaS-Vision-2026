@@ -16,11 +16,11 @@ Este documento sirve como recordatorio para el asistente de IA sobre los pasos q
 3. **Creación del Archivo HTML:**
    - Crear el archivo del post dentro de la carpeta `/posts/`.
    - Utilizar como base el `article-template.html` o los estilos de los posts existentes.
-   - **Navegación:** Asegurarse de que el menú de cristal (`<header>`) incluya siempre el enlace a Inicio, Biblioteca y Sobre mí.
+   - **Navegación y Pie de Página:** Asegurarse de que el menú de cristal (`<header>`) incluya siempre el enlace a Inicio, Biblioteca y Sobre mí. Además, **el pie de página (`<footer>`) debe incluir siempre el enlace a Contacto (`../contacto.html`)**, Aviso Legal, Política de Privacidad y Política de Cookies.
    - **Favicon:** Incluir siempre el código del icono (en formato **PNG**) en la etiqueta `<head>` con la ruta relativa correcta (con los dos puntos) para que el logo se vea en todas las páginas:
      `<link rel="icon" type="image/png" href="../assets/favicon.png">`
      `<link rel="apple-touch-icon" href="../assets/favicon.png">`
-   - **Botón de Compartir** Incluir siempre el botón de "Copiar enlace" y el mensaje de éxito oculto dentro del contenedor `<div class="article-meta">` para facilitar que los usuarios difundan el artículo.
+   - **Botón de Compartir:** Incluir siempre el botón de "Copiar enlace" y el mensaje de éxito oculto dentro del contenedor `<div class="article-meta">` para facilitar que los usuarios difundan el artículo.
 
 4. **Actualización de la Portada y la Biblioteca (NUEVO SISTEMA):**
    - **Añadir a la Biblioteca:** Generar el bloque de la tarjeta (post-card) del nuevo artículo y añadirlo SIEMPRE en la primera posición de `biblioteca.html`.
