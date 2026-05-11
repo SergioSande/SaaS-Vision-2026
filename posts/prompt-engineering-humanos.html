@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Engineering para humanos | SaaS Vision</title>
+    <meta name="description"
+        content="Cómo hablar con la Inteligencia Artificial sin querer tirar el ordenador por la ventana. Guía práctica y sencilla para hacer buenos prompts.">
+
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/favicon.png">
+
+    <link rel="stylesheet" href="../style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="reading-progress"></div>
+
+    <header class="glass-header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">SaaS <span class="neon-text">Vision</span></a>
+            <nav class="nav-links">
+                <a href="../index.html">Inicio</a>
+                <a href="../biblioteca.html">Biblioteca</a>
+                <a href="../sobre-mi.html">Sobre mí</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <div class="article-header">
+                <h1>Cómo hablar con la IA sin querer tirar el ordenador por la ventana (Prompt Engineering para humanos)</h1>
+                <div class="article-meta">
+                    <span>Publicado el: 12 Mayo 2026</span> | <span>Por: SaaS Vision</span> | <span>Tiempo de lectura: 7 min</span>
+                    <button id="copyLinkBtn" class="copy-link-btn" onclick="copyArticleLink()">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                        </svg>
+                        Copiar enlace
+                    </button>
+                    <span id="copySuccessMsg" class="copy-success-msg">¡Copiado!</span>
+                </div>
+            </div>
+
+            <div class="article-image"
+                style="margin-top: 2rem; margin-bottom: 2rem; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);">
+                <img src="../assets/hero_prompt_engineering.png"
+                    alt="Fotografía de un escritorio con enciclopedias apiladas y una nota que dice 'Becario' junto a un móvil"
+                    style="width: 100%; height: auto; display: block;">
+            </div>
+
+            <div class="article-content">
+                <p>Vale, me habéis hecho caso con el último artículo, le habéis perdido el miedo a esto de la IA y os habéis abierto una cuenta en ChatGPT para probar. Pero ahora no paran de llegarme WhatsApps quejándoos: "Oye, le he pedido que me escriba un correo para el trabajo y suena súper falso" o "Le he preguntado una cosa y me ha soltado un tostón infumable".</p>
+
+                <p>Culpa vuestra. Lo digo con cariño, de verdad. El problema es que llevamos veinte años acostumbrados a buscar en Google escribiendo como cavernícolas: "restaurante barato madrid centro". Nos hemos acostumbrado a hablar en palabras clave cortas y sin gramática. Y claro, intentamos hablarle a la IA de la misma manera, esperando que adivine mágicamente el contexto de nuestra vida.</p>
+
+                <h2>La IA es un becario súper motivado (pero sin sentido común)</h2>
+                <p>Para que la máquina te haga caso, tienes que entender qué estás teniendo al otro lado de la pantalla. No es un adivino que lee mentes. De hecho, no sabe absolutamente nada de ti ni de por qué le estás preguntando lo que le estás preguntando.</p>
+
+                <p>Piensa en la IA como si fuera el becario más trabajador del mundo en su primer día de oficina. Se ha leído toda la enciclopedia, está deseando agradar y trabaja rapidísimo, pero tiene cero contexto de la vida real. Si a ese becario le dices "tráeme un café" y te vas, a lo mejor te trae un grano de café crudo masticado. Tienes que decirle: "tráeme un café con leche de avena, templado, en taza grande y ponle sacarina".</p>
+                
+                <p>Con la IA pasa exactamente lo mismo. Si le dices "escribe un correo para mi jefe pidiendo vacaciones", te escribirá una plantilla genérica e impersonal. Tienes que decirle "escribe un correo a mi jefe (que es bastante estricto), pidiendo la última semana de agosto de vacaciones, recuérdale que he cerrado el proyecto grande y hazlo con un tono educado pero firme, en un solo párrafo".</p>
+
+                <h2>El famoso "Prompt" no es ningún conjuro mágico</h2>
+                <p>En clase a este arte de darle órdenes a la máquina lo llaman <strong>Prompt Engineering</strong> (Ingeniería de Prompts). Suena a que tienes que estar trabajando en la NASA resolviendo ecuaciones diferenciales, pero es puro humo para que parezcamos más listos.</p>
+
+                <p>Un prompt no es más que la instrucción o el mensajito que le escribes en la caja de texto. Aprender a hacer buenos prompts es, sencillamente, aprender a explicarte bien. Es recuperar la habilidad de comunicarnos con sujeto, verbo, predicado y mucho contexto. Las habilidades de comunicación que te enseñaron en el colegio son ahora tu mejor herramienta tecnológica.</p>
+
+                <h2>El truco del almendruco: Ponle un disfraz</h2>
+                <p>Si quieres que la IA pase de darte respuestas robóticas a hacer magia de verdad, el secreto está en darle un rol y mucho contexto inicial.</p>
+
+                <p>No le pidas: "Escribe un texto sobre Roma". Te va a soltar un artículo estilo Wikipedia que no hay quien se lea sin dormirse.</p>
+
+                <p>Prueba a decirle esto: <em>"Actúa como un guía turístico enrollado y hazme una lista de 5 sitios para comer pasta en Roma. Quiero que sean sitios donde van los locales, nada de trampas para turistas. Háblame de tú y usa un tono divertido y coloquial"</em>. ¡Bum! Al darle un papel y un objetivo claro, la IA ajusta su forma de "hablar" al instante y el resultado parece escrito por una persona real que de verdad quiere ayudarte.</p>
+
+                <h2>Pídele exactamente cómo lo quieres</h2>
+                <p>A la IA le encanta enrollarse como las persianas. Por defecto, su programación le dice que más texto es mejor. Si no le pones límites, te escribirá cuatro párrafos larguísimos para responderte a algo que se contestaba con un "sí" o un "no".</p>
+
+                <p>Acostúmbrate a exigirle un formato concreto. Pídele cosas como: "explícamelo en tres puntos", "hazme una tabla comparativa", "usa viñetas" o "resume esto en menos de 50 palabras". Mi favorita absoluta cuando no entiendo unos apuntes espesos de la universidad es decirle: <em>"explícamelo como si tuviera 5 años usando una analogía con comida"</em>. Si le marcas la cancha y las reglas del juego, no se saldrá de ella.</p>
+
+                <h2>Es una conversación, no un telegrama</h2>
+                <p>Y el error más común que veo que hace todo el mundo: si la primera respuesta que te da la máquina no te convence, no tienes que borrarlo todo, enfadarte y empezar de cero en un chat nuevo.</p>
+
+                <p>La IA tiene memoria dentro de la misma ventana de chat. Trátala como una conversación de WhatsApp con un colega. Si te escribe un email y te parece muy estirado, contéstale ahí mismo: <em>"Oye, está genial la idea, pero bájale un poco la formalidad que parezco un señor del siglo XIX, hazlo más cercano y recórtalo a la mitad"</em>. La máquina cogerá el contexto de lo que ya ha hecho y lo pulirá en un segundo.</p>
+
+                <p>Deja de usar ChatGPT como si fuera la barra de búsqueda de Google. Tómate diez segundos antes de escribir para pensar qué quieres exactamente, explícaselo a ese becario virtual con todos los detalles posibles y verás cómo dejas de pelearte con el teclado. ¡A ver qué le pedís hoy!</p>
+            </div>
+
+            <section class="related-articles">
+                <h3>Artículos Relacionados</h3>
+                <div class="post-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <a href="nociones-basicas-ia.html" class="post-card">
+                        <div class="post-image-container">
+                            <div class="card-image-placeholder purple-gradient"
+                                style="background-image: url('../assets/hero_nociones_basicas.png'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="post-category">Inteligencia Artificial</div>
+                        </div>
+                        <div class="post-content" style="padding: 15px;">
+                            <h3 style="font-size: 1.1rem; margin-bottom: 5px;">Nociones básicas de IA sin palabras raras</h3>
+                        </div>
+                    </a>
+                    <a href="top-3-herramientas-no-code-ia-2026.html" class="post-card">
+                        <div class="post-image-container">
+                            <div class="card-image-placeholder purple-gradient"
+                                style="background-image: url('../assets/nocode-ia.png'); background-size: cover; background-position: center;">
+                            </div>
+                            <div class="post-category">No-Code</div>
+                        </div>
+                        <div class="post-content" style="padding: 15px;">
+                            <h3 style="font-size: 1.1rem; margin-bottom: 5px;">Top 3 Herramientas con IA para Automatizar</h3>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>SaaS <span class="neon-text">Vision</span></h2>
+                    <p>El futuro de la tecnología, hoy.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="../contacto.html">Contacto</a>
+                    <a href="../aviso-legal.html">Aviso Legal</a>
+                    <a href="../politica-privacidad.html">Política de Privacidad</a>
+                    <a href="../politica-cookies.html">Política de Cookies</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SaaS Vision. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <p>Utilizamos cookies propias y de terceros. <a href="../politica-cookies.html" class="neon-text">Más
+                    información</a>.</p>
+            <div class="cookie-buttons">
+                <button id="accept-cookies" class="btn-primary">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="back-to-top" title="Volver arriba">↑</div>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
+
+
