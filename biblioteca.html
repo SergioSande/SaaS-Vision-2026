@@ -43,6 +43,12 @@
                 el primer día.
             </p>
         </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const count = document.querySelectorAll('#postGrid .post-card').length;
+                document.getElementById('article-counter').textContent = count + ' artículos';
+            });
+        </script>
 
         <div class="filter-controls fade-in-up delay-1" style="margin-bottom: 3rem;">
             <div class="search-bar">
@@ -55,7 +61,46 @@
             </div>
         </div>
 
+        <div class="fade-in-up delay-2" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; max-width: 1200px; margin-left: auto; margin-right: auto;">
+            <h2 style="font-size: 1.5rem; margin: 0; color: #fff;">Todos los artículos</h2>
+            <span id="article-counter" style="font-size: 0.95rem; font-weight: 600; background: rgba(0, 240, 255, 0.1); color: #00f2fe; padding: 4px 14px; border-radius: 20px; border: 1px solid rgba(0, 240, 255, 0.3); font-family: 'Inter', sans-serif;">...</span>
+        </div>
+
         <section class="post-grid fade-in-up delay-2" id="postGrid">
+
+            <a href="posts/aprender-programar-sobrevalorado-2026.html" class="post-card zoom-in delay-0">
+                <div class="post-image-container">
+                    <div class="card-image-placeholder blue-gradient"
+                        style="background-image: url('assets/aprender_programar.png'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="post-category">Reflexión e IA</div>
+                </div>
+                <div class="post-content">
+                    <h3>Por qué aprender a programar en 2026 está sobrevalorado (si no sabes resolver problemas reales)</h3>
+                    <p class="post-excerpt">La IA está cambiando las reglas del juego. Saber la sintaxis ya no es suficiente; lo que cuenta es tu capacidad para resolver problemas reales.</p>
+                    <div class="post-meta">
+                        <span class="post-date">14 Mayo 2026</span>
+                        <span class="read-more">Leer Artículo <span class="arrow">→</span></span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="posts/profesores-chatgpt-universidad.html" class="post-card zoom-in delay-0">
+                <div class="post-image-container">
+                    <div class="card-image-placeholder purple-gradient"
+                        style="background-image: url('assets/profesores_chatgpt.png'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="post-category">Universidad e IA</div>
+                </div>
+                <div class="post-content">
+                    <h3>Lo que mis profesores de la universidad opinan de verdad sobre que usemos ChatGPT</h3>
+                    <p class="post-excerpt">La verdad sin filtros sobre cómo reaccionan los profesores al uso de inteligencia artificial en las aulas y por qué el sistema educativo actual es una contradicción.</p>
+                    <div class="post-meta">
+                        <span class="post-date">13 Mayo 2026</span>
+                        <span class="read-more">Leer Artículo <span class="arrow">→</span></span>
+                    </div>
+                </div>
+            </a>
 
             <a href="posts/prompt-engineering-humanos.html" class="post-card zoom-in delay-0">
                 <div class="post-image-container">
