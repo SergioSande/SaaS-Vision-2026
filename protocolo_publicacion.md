@@ -6,12 +6,16 @@ Este documento sirve como recordatorio para el asistente de IA sobre los pasos q
 
 1. **Humanizar el Contenido (Tono y Perspectiva):**
    - **Perspectiva del Autor:** El autor es un **estudiante de primero de Inteligencia Artificial**, NO un experto gurú. El tono debe ser de alguien que está aprendiendo y compartiendo sus descubrimientos con humildad y curiosidad. ¡Prohibido usar la palabra experto!
+   - **Privacidad y Realismo:** NO incluir NUNCA en los artículos información personal de la familia del autor (padres, hermanos, etc.) ni datos que no sean reales y verídicos de su situación. Todo el contenido personal debe ser genuino y salvaguardar la privacidad familiar.
    - **Cero introducciones repetitivas:** NO empezar nunca los artículos con "Bienvenidos a una nueva entrega de SaaS Vision..." o fórmulas similares. Entrar directo al tema principal de forma natural y atractiva.
    - Adaptar el texto para que tenga un tono conversacional, humano y cercano, evitando a toda costa el estilo robótico y repetitivo de la IA genérica. Importante también no prometer ni decir lo próximo que se va a publicar.
+   - **Estilo Meramente Informativo (Cero Familia):** NO incluir NUNCA en los artículos información, anécdotas o referencias a la familia del autor (padres, hermanos, tíos, primos, hijos, etc.), ni siquiera inventadas. Los artículos deben ser MERAMENTE INFORMATIVOS, directos y profesionales, sin usar el recurso narrativo de "le he dicho a mi familia", "en la comida familiar" o similares.
 
 2. **Generar la Imagen Principal (Hero Image):**
-   - **MUY IMPORTANTE:** Las imágenes **NO pueden parecerse entre sí**. Tienen que ser completamente variadas, distintas y muy atractivas para captar la atención del usuario.
-   - **CERO ASPECTO "IA":** Las fotos deben verse 100% auténticas, como si hubiera un trabajo fotográfico real y humano detrás. Evitar a toda costa la estética típica y genérica de imágenes generadas por inteligencia artificial. La web debe transmitir que hay esfuerzo, curación y profesionalidad (manteniendo el buen nivel actual, sin volver al estilo de los inicios del proyecto).
+   - **Estilo Realista y Conceptual:** Las imágenes deben ser extremadamente realistas. **NUNCA deben aparecer personas**.
+   - **Temática:** Utilizar esquemas visuales, diagramas, objetos inanimados, cuadernos de notas o composiciones que den una idea clara al lector sobre el contenido del artículo.
+   - **CERO ASPECTO "IA":** Evitar a toda costa la estética típica y genérica de imágenes generadas por inteligencia artificial (como robots o cerebros brillantes).
+   - **Variedad:** Las imágenes **NO pueden parecerse entre sí**. Tienen que ser completamente variadas, distintas y muy atractivas para captar la atención del usuario.
 
 3. **Creación del Archivo HTML:**
    - Crear el archivo del post dentro de la carpeta `/posts/`.
