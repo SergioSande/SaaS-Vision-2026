@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Por qué las contraseñas están muriendo - SaaS Vision 2026</title>
+    <meta name="description" content="Descubre cómo las Passkeys están eliminando las contraseñas tradicionales y por qué no tener clave es mucho más seguro contra los piratas informáticos.">
+    <link rel="stylesheet" href="../style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/favicon.png">
+</head>
+
+<body>
+    <!-- Barra de progreso de lectura -->
+    <div id="reading-progress"></div>
+
+    <!-- Iluminación de fondo futurista -->
+    <div class="ambient-glow"></div>
+
+    <header class="glass-header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">SaaS <span class="neon-text">Vision</span></a>
+            <nav class="nav-links">
+                <a href="../index.html">Inicio</a>
+                <a href="../biblioteca.html">Biblioteca</a>
+                <a href="../sobre-mi.html">Sobre mí</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <div class="article-header fade-in-up">
+                <h1>"He olvidado la clave otra vez": Por qué las contraseñas están muriendo y cómo entrar en tus cuentas sin ellas</h1>
+                <div class="article-meta">
+                    <span>Publicado el: 29 Mayo 2026</span> | <span>Por: SaaS Vision</span> | <span>Tiempo de lectura: 4 min</span>
+                    <button id="copyLinkBtn" class="copy-link-btn" onclick="copyArticleLink()">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                        </svg>
+                        Copiar enlace
+                    </button>
+                    <span id="copySuccessMsg" class="copy-success-msg">¡Copiado!</span>
+                </div>
+            </div>
+
+            <div class="article-image fade-in-up delay-1">
+                <img src="../assets/fin_contrasenas_libreta.png" alt="Fotografía realista de una libreta negra desgastada con texto tachado, un bolígrafo rojo y un teléfono inteligente sobre un escritorio de madera" style="width: 100%; border-radius: 12px; margin-bottom: 2rem;">
+            </div>
+
+            <div class="article-content fade-in-up delay-2">
+                <p>El miércoles por la tarde me encontré a mi madre bufando frente a la pantalla del ordenador. Tenía encima de la mesa su famosa "libreta negra", un cuaderno de anillas desgastado que guarda como oro en paño en el cajón del escritorio. Estaba intentando entrar en la web de la Seguridad Social para descargar un documento, y la escena era un clásico en cualquier hogar.</p>
+
+                <p>Había probado <em>Paco1968</em>, <em>Paco1968!</em> y <em>Paco_1968</em>. Ninguna funcionaba. Cuando le dio al temido botón de "He olvidado mi contraseña", la página web le exigió crear una nueva que tuviera al menos ocho caracteres, una mayúscula, un número y un símbolo especial. Mi madre resopló, tachó la contraseña antigua en su libreta con un bolígrafo rojo, escribió <em>Paco1968?</em> y murmuró: "El mes que viene cuando tenga que volver a entrar, no me voy a acordar de este maldito signo de interrogación".</p>
+
+                <p>En mis clases de la universidad, cuando tocamos temas de ciberseguridad, siempre llegamos a la misma conclusión: el sistema de contraseñas es uno de los mayores fracasos tecnológicos de la historia moderna. Le hemos pedido a la memoria humana que haga algo para lo que no está diseñada.</p>
+
+                <p>Pero tengo una excelente noticia para mi madre y para cualquiera que tenga una libreta llena de tachones. Estamos en 2026, y la industria tecnológica por fin se ha puesto de acuerdo para matar a la contraseña tradicional. Si no sabes qué son las Passkeys (o llaves de acceso), acompáñame, porque estás a punto de tirar esa libreta negra a la basura para siempre.</p>
+
+                <h2>El bucle infinito y el error humano</h2>
+                <p>El problema de las contraseñas es que nacieron en los años 60, cuando los ordenadores eran armarios gigantes que usaban tres científicos en un laboratorio. Nadie imaginó que cincuenta años después, una persona normal tendría unas cien cuentas digitales distintas: el banco, el correo, Netflix, la luz, la tienda de ropa, el ayuntamiento y el supermercado.</p>
+
+                <p>Como el cerebro humano no puede memorizar cien combinaciones distintas de letras raras y números, hacemos trampas. O usamos la misma contraseña para todo (lo cual es un peligro enorme, porque si un pirata informático roba la clave de una tienda de zapatos barata, ya tiene la llave de tu correo electrónico), o usamos contraseñas ridículamente fáciles como 123456 o QWERTY.</p>
+
+                <p>Y si intentamos hacer las cosas bien y creamos contraseñas complejas, acabamos dependiendo de la famosa libreta, perdiendo veinte minutos cada vez que queremos comprar algo por internet o cayendo en el eterno bucle de "Restablecer contraseña". La tecnología se había convertido en un obstáculo.</p>
+
+                <h2>La revolución invisible: ¿Qué es una "Passkey"?</h2>
+                <p>Para solucionar este caos, gigantes como Apple, Google y Microsoft decidieron unirse y crear un estándar nuevo. Lo llamaron Passkeys (en español lo verás traducido en muchas webs como "Llaves de acceso"). Su objetivo es brutalmente simple: entrar en cualquier página web tiene que ser tan fácil como desbloquear la pantalla de tu teléfono móvil.</p>
+
+                <p>Imagina que tu teléfono móvil es tu portero de discoteca personal. Tú ya le has demostrado a tu teléfono quién eres mediante tu huella dactilar o el reconocimiento de tu cara. Cuando entras en la web de Amazon y quieres comprar algo, la web ya no te pide que teclees una palabra secreta.</p>
+
+                <p>En su lugar, Amazon le manda un mensaje silencioso a tu teléfono que dice: <em>"Oye, tengo a alguien aquí intentando entrar en la cuenta de Juan. ¿Me confirmas que es él?"</em>. Tu teléfono hace vibrar tu pantalla y te pide que pongas el dedo en el lector de huellas o mires a la cámara. Cuando lo haces, el teléfono le contesta a Amazon: <em>"Sí, acabo de verle la cara, es Juan"</em>. Y mágicamente, entras en tu cuenta.</p>
+
+                <p>No has tecleado nada. No has tenido que recordar si la "a" era mayúscula o si habías puesto un asterisco al final. Tu presencia física es tu nueva contraseña.</p>
+
+                <h2>La pesadilla de los piratas informáticos</h2>
+                <p>Llegados a este punto, mi madre (que es muy desconfiada para estas cosas) me hizo la pregunta del millón: <em>"Pero si no hay contraseña, ¿no es más fácil que me roben la cuenta?"</em>.</p>
+
+                <p>Paradójicamente, no tener contraseña es mil veces más seguro que tenerla. Y la razón es cómo actúan los piratas informáticos hoy en día.</p>
+
+                <p>Los ciberdelincuentes no suelen adivinar tu contraseña una a una. Lo que hacen es engañarte. Te mandan un mensaje falso del banco (el famoso phishing) diciendo "Su cuenta ha sido bloqueada, entre aquí para solucionarlo". Tú entras en una página web falsa que es idéntica a la del banco, tecleas tu contraseña con toda tu buena fe, y ellos te la roban.</p>
+
+                <p>Con las llaves de acceso, este engaño es matemáticamente imposible. ¿Por qué? Porque no hay nada que puedas teclear. Si un estafador te manda a una web falsa del banco, tu teléfono móvil es lo suficientemente inteligente para darse cuenta de que esa página no es la real. El teléfono simplemente se negará a entregar la llave, y el estafador se quedará con las manos vacías. Al no existir una palabra secreta, no puedes decírsela a nadie por error.</p>
+
+                <p>Además, si atacan los servidores de una empresa (imaginemos que hackean un foro donde estás registrado), los ladrones no encontrarán ningún archivo con contraseñas que robar. La llave privada de acceso nunca sale del chip de seguridad físico de tu teléfono u ordenador. Es un muro de hormigón impenetrable para los métodos de robo tradicionales.</p>
+
+                <h2>Cómo empezar a limpiar tu libreta hoy mismo</h2>
+                <p>Lo mejor de esta tecnología es que ya no es ciencia ficción; está funcionando ahora mismo en las aplicaciones que usas todos los días. La transición se está haciendo poco a poco, pero ya puedes empezar a despedirte de teclear claves.</p>
+
+                <p>La próxima vez que entres en los ajustes de tu cuenta de Google, Amazon, WhatsApp o en las aplicaciones de tu banco, busca el apartado de "Seguridad". Verás que muchas de ellas ya tienen un botón grande que dice "Crear una llave de acceso" o "Usar Passkey".</p>
+
+                <p>Si le das a ese botón, la aplicación te pedirá tu huella o tu cara una sola vez para crear el enlace. A partir de ese momento, la contraseña tradicional quedará desactivada para siempre en esa plataforma. La próxima vez que quieras entrar, solo tendrás que mirar la pantalla de tu móvil.</p>
+
+                <p>Cuando mi madre configuró su primera llave de acceso en el correo electrónico y vio que entraba automáticamente solo con mirar la cámara del móvil, se quedó mirando la libreta negra durante un buen rato. Todavía no la ha tirado a la papelera —las costumbres de toda una vida son difíciles de matar—, pero sé que esa tarde fue la última vez que tuvo que usar el bolígrafo rojo para tachar un asterisco.</p>
+
+                <p>La tecnología a veces puede parecer abrumadora y complicada, pero sus mayores triunfos ocurren precisamente cuando se vuelve invisible, quitándonos dolores de cabeza mecánicos y devolviéndonos nuestro tiempo. Y borrar para siempre el bucle de "He olvidado mi contraseña" es, sin duda, una de sus mejores victorias.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>SaaS <span class="neon-text">Vision</span></h2>
+                    <p>El futuro de la tecnología, hoy.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="../contacto.html">Contacto</a>
+                    <a href="../aviso-legal.html">Aviso Legal</a>
+                    <a href="../politica-privacidad.html">Política de Privacidad</a>
+                    <a href="../politica-cookies.html">Política de Cookies</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SaaS Vision. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Banner de Cookies -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <p>Utilizamos cookies propias y de terceros. <a href="../politica-cookies.html" class="neon-text">Más
+                    información</a>.</p>
+            <div class="cookie-buttons">
+                <button id="accept-cookies" class="btn-primary">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón Volver Arriba -->
+    <div id="back-to-top" title="Volver arriba">↑</div>
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>

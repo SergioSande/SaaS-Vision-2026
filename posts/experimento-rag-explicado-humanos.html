@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo hacer que la IA deje de inventarse cosas (RAG) - SaaS Vision 2026</title>
+    <meta name="description" content="Descubre qué es el RAG y cómo utilicé esta técnica para evitar que la IA alucine y se invente información en mis exámenes.">
+    <link rel="stylesheet" href="../style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/favicon.png">
+</head>
+
+<body>
+    <!-- Barra de progreso de lectura -->
+    <div id="reading-progress"></div>
+
+    <!-- Iluminación de fondo futurista -->
+    <div class="ambient-glow"></div>
+
+    <header class="glass-header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">SaaS <span class="neon-text">Vision</span></a>
+            <nav class="nav-links">
+                <a href="../index.html">Inicio</a>
+                <a href="../biblioteca.html">Biblioteca</a>
+                <a href="../sobre-mi.html">Sobre mí</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <div class="article-header fade-in-up">
+                <h1>Cómo hacer que la IA deje de inventarse cosas: Mi primer experimento con RAG (explicado para humanos)</h1>
+                <div class="article-meta">
+                    <span>Publicado el: 25 Mayo 2026</span> | <span>Por: SaaS Vision</span> | <span>Tiempo de lectura: 6 min</span>
+                    <button id="copyLinkBtn" class="copy-link-btn" onclick="copyArticleLink()">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                        </svg>
+                        Copiar enlace
+                    </button>
+                    <span id="copySuccessMsg" class="copy-success-msg">¡Copiado!</span>
+                </div>
+            </div>
+
+            <div class="article-image fade-in-up delay-1">
+                <img src="../assets/experimento_rag_ia.png" alt="Ilustración de una biblioteca digital organizada con datos brillantes" style="width: 100%; border-radius: 12px; margin-bottom: 2rem;">
+            </div>
+
+            <div class="article-content fade-in-up delay-2">
+                <p>Estamos a finales de mayo y la presión de los exámenes finales ya se nota en los pasillos de la facultad. Hace un par de semanas, a las dos de la madrugada, estaba repasando unos apuntes bastante densos sobre legislación y ética en el desarrollo de software. Como estaba agotado y no entendía un concepto sobre una normativa europea específica, hice lo que hacemos todos hoy en día: abrí ChatGPT y le pedí que me lo explicara.</p>
+
+                <p>La máquina me devolvió una respuesta brillante. Estaba perfectamente estructurada, usaba un vocabulario impecable y citaba un artículo concreto de la ley de 2024. Copié la respuesta en mis apuntes, me sentí el tipo más listo del mundo por ahorrarme media hora de lectura y me fui a dormir.</p>
+
+                <p>Al día siguiente, en clase, le comenté el artículo de la ley al profesor para hacerme el interesante. El profesor me miró con cara rara, se ajustó las gafas y me dijo: "Ese artículo no existe. La normativa que mencionas nunca llegó a aprobarse con ese texto".</p>
+
+                <p>Me puse rojo como un tomate. La Inteligencia Artificial me había mentido en la cara. Y lo peor de todo es que lo había hecho con una seguridad y una convicción aplastantes. En el mundo de la Inteligencia Artificial, a este fenómeno lo llamamos "alucinación". Es el mayor peligro de usar estas herramientas para estudiar o trabajar y, hasta hace muy poco, pensaba que era un defecto imposible de solucionar.</p>
+
+                <p>Pero entonces descubrí una técnica que me ha volado la cabeza. Es la misma tecnología que están usando las empresas más punteras para crear herramientas fiables, y hoy os voy a explicar cómo monté mi propio experimento en mi habitación. Se llama RAG, y es la magia que hace que la IA deje de ser un cuentacuentos para convertirse en un bibliotecario estricto.</p>
+
+                <h2>El problema del "estudiante sabelotodo"</h2>
+                <p>Para entender cómo solucionar el problema de las mentiras de la IA, primero tenemos que entender por qué mienten.</p>
+
+                <p>Cuando usas un modelo de lenguaje normal, estás interactuando con un programa que se ha "leído" casi todo internet. El problema es que no tiene un disco duro perfecto donde guarde cada palabra. Lo que tiene es una memoria estadística. Sabe qué palabras suelen ir juntas.</p>
+
+                <p>Un modelo de lenguaje es como ese típico estudiante de la clase que se ha leído el libro por encima, tiene muy buena labia y odia admitir que no sabe la respuesta. Si le haces una pregunta en el examen y no se acuerda del dato exacto, en lugar de dejar la pregunta en blanco, te va a improvisar una respuesta mezclando conceptos que suenan bien. Te va a escribir un párrafo precioso, pero totalmente inventado.</p>
+
+                <h2>La solución: El examen a libro abierto (RAG)</h2>
+                <p>En clase de arquitecturas de software nos explicaron que la solución a esto no es hacer que el modelo memorice mejor las cosas, sino cambiarle las reglas del juego. Ahí es donde entra el RAG (por sus siglas en inglés: Retrieval-Augmented Generation, que suena a película de ciencia ficción pero se traduce como "Generación Aumentada por Recuperación").</p>
+
+                <p>La idea es brillante por lo sencilla que es. Imagina que pasamos de hacerle al estudiante un examen de memoria a puerta cerrada, a hacerle un examen a libro abierto.</p>
+
+                <p>En lugar de preguntarle directamente a la IA y dejar que rebusque en su memoria borrosa, el proceso del RAG hace esto:</p>
+
+                <ol>
+                    <li>Tú le haces una pregunta.</li>
+                    <li>El sistema pone a la IA en pausa por un segundo.</li>
+                    <li>El sistema busca en tus propios documentos (tus PDFs, tus apuntes, los manuales de tu empresa) el párrafo exacto donde se habla de ese tema.</li>
+                    <li>Le entrega ese párrafo a la IA junto con una orden muy estricta: "Lee este texto. Responde a la pregunta del usuario basándote ÚNICA Y EXCLUSIVAMENTE en lo que pone aquí. Si la respuesta no está en este texto, di 'No lo sé' y no te inventes nada".</li>
+                </ol>
+
+                <h2>Mi experimento: Domando al monstruo</h2>
+                <p>Decidí que no iba a volver a hacer el ridículo en clase, así que dediqué un fin de semana a montar mi primer sistema RAG. Mi objetivo era crear un chat que solo me respondiera basándose en los 15 PDFs de la asignatura de Ética, ignorando el resto de internet.</p>
+
+                <p>Aunque suene a magia negra para programadores, en realidad el proceso tuvo tres bloques bastante lógicos (y que hoy en día se pueden montar casi sin picar código usando herramientas visuales):</p>
+
+                <ul>
+                    <li><strong>La trituradora de papel (El Procesamiento):</strong> Lo primero que tuve que hacer fue coger todos mis PDFs de la universidad y pasarlos por un programa que los "trituró". Cortó los textos en párrafos pequeñitos.</li>
+                    <li><strong>La biblioteca matemática (Los Embeddings):</strong> Aquí viene la parte más alucinante. El sistema cogió cada párrafo y lo convirtió en una serie de números (coordenadas matemáticas). Esto sirve para que el ordenador sepa de qué habla cada texto sin tener que leerlo entero. Si un párrafo habla de "privacidad de datos" y otro habla de "cookies", el sistema los pone muy juntitos en su biblioteca invisible porque sabe que los conceptos están relacionados.</li>
+                    <li><strong>El perro rastreador (La Búsqueda):</strong> Cuando yo le pregunto al chat "¿Qué dice el temario sobre la privacidad en redes sociales?", el sistema no se va a buscar a internet. Va a mi biblioteca de párrafos, encuentra los tres fragmentos que más se parecen a mi pregunta, los saca y se los da a la Inteligencia Artificial para que me redacte una respuesta bonita.</li>
+                </ul>
+
+                <h2>El resultado: Cero creatividad, 100% fiabilidad</h2>
+                <p>Cuando probé el sistema por primera vez, me quedé mirando la pantalla con una sonrisa de oreja a oreja. Le hice una pregunta trampa sobre una ley que no entraba en el temario.</p>
+
+                <p>Si le hubiera preguntado al ChatGPT normal, me habría escrito tres párrafos explicándome la ley con pelos y señales. Sin embargo, mi nuevo sistema RAG me contestó: <em>"Lo siento, no hay información sobre esa ley en los documentos proporcionados"</em>.</p>
+
+                <p>Había logrado algo increíble: había castrado la creatividad de la Inteligencia Artificial. La había obligado a ser aburrida, predecible y dolorosamente honesta. Y en el mundo del estudio y de los negocios, lo aburrido y lo honesto vale su peso en oro.</p>
+
+                <h2>Por qué esto cambia las reglas de los Micro-SaaS</h2>
+                <p>Como comentaba en mi último artículo sobre los "wrappers", la época de revender ChatGPT con una interfaz bonita se ha acabado. Cualquiera puede pedirle a una máquina que invente un poema o que escriba un correo genérico.</p>
+
+                <p>Pero el RAG es la llave maestra para los verdaderos negocios del futuro en 2026. El valor real está en coger la inmensa capacidad de razonamiento de la Inteligencia Artificial y atarla en corto a datos privados que nadie más tiene.</p>
+
+                <p>Imagina un despacho de abogados que usa un sistema RAG conectado exclusivamente a los historiales de sentencias de su propio bufete. La IA nunca se inventará una ley; solo citará casos que el bufete ya ha ganado.</p>
+
+                <p>Imagina un taller mecánico que conecta un chat a los manuales de reparación de mil modelos de coches diferentes. El mecánico pregunta "¿Cómo se desmonta el motor de arranque del modelo X?" y la máquina le da las instrucciones exactas citando la página 45 del manual oficial.</p>
+
+                <p>Construir esto en mi habitación me ha enseñado que la Inteligencia Artificial no es un oráculo mágico que todo lo sabe. Es, simplemente, el procesador de texto más potente jamás creado. Si le metes basura o le dejas vía libre, te devolverá basura y mentiras preciosamente redactadas. Pero si aprendes a darle la información correcta y a ponerle límites estrictos, se convierte en la herramienta más fiable con la que jamás hayamos trabajado.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>SaaS <span class="neon-text">Vision</span></h2>
+                    <p>El futuro de la tecnología, hoy.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="../contacto.html">Contacto</a>
+                    <a href="../aviso-legal.html">Aviso Legal</a>
+                    <a href="../politica-privacidad.html">Política de Privacidad</a>
+                    <a href="../politica-cookies.html">Política de Cookies</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SaaS Vision. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Banner de Cookies -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <p>Utilizamos cookies propias y de terceros. <a href="../politica-cookies.html" class="neon-text">Más
+                    información</a>.</p>
+            <div class="cookie-buttons">
+                <button id="accept-cookies" class="btn-primary">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón Volver Arriba -->
+    <div id="back-to-top" title="Volver arriba">↑</div>
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>

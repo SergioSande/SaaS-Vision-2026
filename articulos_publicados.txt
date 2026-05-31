@@ -1,0 +1,40 @@
+1. Las 5 estrellas de mentira: Cómo saber si esa reseña de Amazon la ha escrito una IA
+2. Cómo organizar las vacaciones perfectas en 20 minutos gracias a la Inteligencia Artificial
+3. El fin de la letra pequeña: Cómo uso la IA para que me traduzca los contratos del banco y la luz
+4. Por qué es un peligro usar esas apps que "te convierten en un dibujo animado"
+5. "Mi hijo hace los deberes con ChatGPT": Consejos de un estudiante de IA para padres preocupados
+6. "¿La máquina me va a quitar el puesto?": Una explicación realista para los que no somos ingenieros
+7. "¡Mi teléfono me escucha!": La verdad sobre por qué te salen anuncios de lo que acabas de hablar
+8. Guía para detectar estafas con IA: Todo lo que debes saber
+9. Por qué he decidido ir lento en el año más rápido de la historia (y la burbuja de los Micro-SaaS)
+10. Por qué aprender a programar en 2026 está sobrevalorado (si no sabes resolver problemas reales)
+11. Lo que mis profesores de la universidad opinan de verdad sobre que usemos ChatGPT
+12. Cómo hablar con la IA sin querer tirar el ordenador por la ventana (Prompt Engineering para humanos)
+13. Nociones básicas de IA que todo el mundo ya debería saber (explicado sin palabras raras)
+14. Expectativa vs Realidad: Mi primer año estudiando Inteligencia Artificial
+15. Mi Kit de Supervivencia 0€: Cómo estudio y emprendo en 2026 sin gastar un céntimo
+16. Cómo alojé esta web GRATIS para siempre (tras chocar con el muro de pago de Netlify)
+17. IA Local: Cómo dejé de regalar mis datos a la nube (y cómo instalar tu propio modelo gratis en 10 minutos)
+18. El Fin de las Excusas: Cómo Construir tu SaaS en 2026 sin Código y sin Capital
+19. El Futuro del Trabajo ya está Aquí: Las 5 Profesiones que Liderarán la Economía en 2026
+20. Revoluciona tu Aprendizaje: La Guía Definitiva para Estudiar con IA en 2026
+21. La Privacidad en la Era de la IA: El Gran Reto Digital de 2026
+22. Top 3 Herramientas No-Code con IA para Automatizar tu Trabajo Gratis
+23. Los 5 Mejores Agentes de IA que están Transformando el Trabajo en 2026
+24. El cementerio de los "Wrappers": Por qué revender la API de ChatGPT con otro diseño ya no funciona en 2026
+25. Cómo hacer que la IA deje de inventarse cosas: Mi primer experimento con RAG (explicado para humanos)
+26. Diseccionando un Micro-SaaS: Las 3 únicas capas que necesitas para lanzar una app hoy
+27. La IA no es magia, es silicio ardiendo: Mi choque de realidad con el hardware local
+28. Por qué el código abierto es la única esperanza para que la IA no acabe en manos de tres empresas
+29. "He olvidado la clave otra vez": Por qué las contraseñas están muriendo y cómo entrar en tus cuentas sin ellas
+30. Por qué hace meses que no me descargo una App nueva (y qué es eso de los 'Agentes Invisibles')
+31. El contable de bolsillo: Cómo cuadrar los gastos del mes familiar sin saber usar Excel
+32. El síndrome de las 15.000 fotos: Cómo encontrar cualquier recuerdo en tu móvil en un segundo (y por qué deberías dejar de crear álbumes)
+
+
+
+
+
+
+
+
